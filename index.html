@@ -1,674 +1,485 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kamal Venkitachalam | AI Filmmaker & Generative Video Creator</title>
-<meta name="description" content="Kamal Venkitachalam — Award-winning AI Filmmaker. 7 International Film Awards including IFFI Goa 2023. Expert in AI video, generative cinema, voice synthesis and cinematic AI pipelines. Available globally.">
-<meta name="keywords" content="AI video, AI filmmaker, generative AI, AI video production, Luma AI, Kling AI, Higgsfield, Google Veo 3, ElevenLabs, cinematic AI, AI content creator, Kerala India, freelance AI video">
+<meta name="description" content="Kamal Venkitachalam — Award-winning AI Filmmaker. 7 International Awards including IFFI Goa 2023. Full-pipeline generative video production. Available globally.">
 <meta name="author" content="Kamal Venkitachalam">
-<meta name="robots" content="index, follow">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Kamal Venkitachalam | AI Filmmaker & Creative Producer">
-<meta property="og:description" content="Award-winning AI Filmmaker. 7 International Awards. IFFI Goa 2023. Full-pipeline generative video production.">
-<meta property="og:url" content="https://vps4kamal-design.github.io/AI-Video-_portfolio/">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-:root {
-  --gold: #C9A84C;
-  --gold-light: #E2C97E;
-  --gold-dim: #7A5F28;
-  --gold-glow: rgba(201,168,76,0.12);
-  --black: #06060A;
-  --surface: #0C0C12;
-  --surface2: #111118;
-  --surface3: #17171F;
-  --border: rgba(201,168,76,0.1);
-  --border-mid: rgba(201,168,76,0.22);
-  --border-strong: rgba(201,168,76,0.45);
-  --text: #EEE8D5;
-  --text-muted: #7A7060;
-  --text-dim: #3D3A32;
-  --red-accent: #C0392B;
+:root{
+  --gold:#D4A847;
+  --gold-light:#F0C96A;
+  --gold-dim:#8B6E2A;
+  --black:#07070F;
+  --surf:#101020;
+  --surf2:#151528;
+  --surf3:#1C1C38;
+  --bdr:rgba(212,168,71,0.18);
+  --bdr2:rgba(212,168,71,0.38);
+  --bdr3:rgba(212,168,71,0.65);
+  --txt:#FFFFFF;
+  --txt2:#D8D0C0;
+  --txt3:#A09880;
+  --txt4:#606070;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--black);color:var(--text);font-family:'Outfit',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden;cursor:none}
+body{background:var(--black);color:var(--txt);font-family:'Inter',sans-serif;line-height:1.75;overflow-x:hidden}
+a{text-decoration:none}
 
-/* CUSTOM CURSOR */
-.cursor{position:fixed;width:8px;height:8px;background:var(--gold);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform 0.1s;mix-blend-mode:difference}
-.cursor-ring{position:fixed;width:32px;height:32px;border:1px solid var(--gold);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:all 0.18s ease;opacity:0.5}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:1rem 4rem;background:rgba(7,7,15,0.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--bdr)}
+.nlogo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:0.3em;color:#fff}.nlogo span{color:var(--gold)}
+.nlinks{display:flex;gap:2.5rem;list-style:none}
+.nlinks a{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--txt2);transition:color .2s}
+.nlinks a:hover{color:var(--gold-light)}
 
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.2rem 5rem;background:rgba(6,6,10,0.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
-.nav-logo{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:0.32em;color:var(--text)}
-.nav-logo span{color:var(--gold)}
-.nav-links{display:flex;gap:2.8rem;list-style:none}
-.nav-links a{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-muted);text-decoration:none;transition:color 0.25s}
-.nav-links a:hover{color:var(--gold-light)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:90px 4rem 5rem;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 65% 55% at 80% 10%,rgba(212,168,71,0.09) 0%,transparent 60%),linear-gradient(175deg,#07070F 0%,#0D0D22 100%)}
+.hgrid{position:absolute;inset:0;z-index:0;background-image:linear-gradient(rgba(212,168,71,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(212,168,71,0.05) 1px,transparent 1px);background-size:55px 55px}
+.hrow{position:relative;z-index:1}
+.htag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.32em;color:var(--gold);text-transform:uppercase;margin-bottom:1.4rem;display:flex;align-items:center;gap:1rem}
+.htag::before{content:'';display:block;width:34px;height:1px;background:var(--gold)}
+h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(4rem,10vw,11rem);line-height:0.9;letter-spacing:0.03em;color:#fff}
+h1 .acc{color:var(--gold-light);display:block}
+.hsub{font-size:1.05rem;color:var(--txt2);max-width:500px;margin:2rem 0 2.8rem;line-height:1.9;padding-left:1.4rem;border-left:2px solid var(--gold-dim)}
+.hbtns{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4rem}
+.bg{padding:.9rem 2.2rem;background:var(--gold);color:#07070F;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;transition:all .3s;border:2px solid transparent}
+.bg:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,168,71,.35)}
+.bo{padding:.9rem 2.2rem;border:2px solid var(--bdr2);color:var(--txt2);font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;transition:all .3s}
+.bo:hover{border-color:var(--gold);color:var(--gold-light)}
+.hstats{display:flex;flex-wrap:wrap;padding-top:2.5rem;border-top:1px solid var(--bdr)}
+.st{padding-right:3rem;margin-right:3rem;border-right:1px solid var(--bdr)}
+.st:last-child{border-right:none;margin-right:0}
+.sv{font-family:'Bebas Neue',sans-serif;font-size:3.8rem;color:var(--gold-light);line-height:1;margin-bottom:.3rem}
+.sl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;color:var(--txt2)}
 
-/* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 5rem 6rem;position:relative;overflow:hidden}
-.hero-noise{position:absolute;inset:0;z-index:0;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");background-size:200px}
-.hero-bg{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse 60% 70% at 75% 20%,rgba(201,168,76,0.07) 0%,transparent 60%),radial-gradient(ellipse 40% 50% at 5% 90%,rgba(201,168,76,0.04) 0%,transparent 55%),linear-gradient(160deg,#06060A 0%,#0A0A10 100%)}
-.hero-line{position:absolute;top:0;left:5rem;width:1px;height:100%;background:linear-gradient(to bottom,transparent,var(--gold-dim),transparent);opacity:0.4}
-.hero-eyebrow{position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.4em;color:var(--gold);text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:1.2rem}
-.hero-eyebrow::before{content:'';display:block;width:40px;height:1px;background:var(--gold)}
-.hero-title{position:relative;z-index:1;font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,11vw,12rem);line-height:0.88;letter-spacing:0.03em;color:var(--text)}
-.hero-title .accent{color:var(--gold-light);display:block}
-.hero-subtitle{position:relative;z-index:1;font-size:1rem;color:var(--text-muted);max-width:480px;margin:2rem 0 3rem;font-weight:300;line-height:1.95;padding-left:1.4rem;border-left:1px solid var(--gold-dim)}
-.hero-ctas{position:relative;z-index:1;display:flex;gap:1.2rem;align-items:center;flex-wrap:wrap}
-.btn-gold{padding:0.9rem 2.4rem;background:var(--gold);color:#06060A;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:all 0.3s;display:inline-block}
-.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,0.3)}
-.btn-outline{padding:0.9rem 2.4rem;border:1px solid var(--border-mid);color:var(--text-muted);font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;display:inline-block}
-.btn-outline:hover{border-color:var(--gold);color:var(--gold-light)}
-.hero-stats{position:relative;z-index:1;display:flex;flex-wrap:wrap;margin-top:5rem;padding-top:2rem;border-top:1px solid var(--border)}
-.stat{padding-right:3rem;margin-right:3rem;border-right:1px solid var(--border)}
-.stat:last-child{border-right:none;margin-right:0}
-.stat-val{font-family:'Bebas Neue',sans-serif;font-size:3.5rem;color:var(--gold-light);line-height:1;margin-bottom:0.2rem}
-.stat-label{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--text-dim)}
+section{padding:7rem 4rem;position:relative;z-index:1}
+.stag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.3em;color:var(--gold);text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:1rem}
+.stag::before{content:'';display:block;width:28px;height:1px;background:var(--gold)}
+.sh{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.4rem,5vw,4.4rem);line-height:.95;letter-spacing:.04em;color:#fff;margin-bottom:.8rem}
+.sh em{color:var(--gold-light);font-style:normal}
+.sdesc{font-size:1rem;color:var(--txt2);max-width:580px;margin-top:1rem;line-height:1.85}
 
-/* SECTIONS */
-section{padding:8rem 5rem;position:relative;z-index:1}
-.section-eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.35em;color:var(--gold);text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:1rem}
-.section-eyebrow::before{content:'';display:block;width:30px;height:1px;background:var(--gold)}
-.section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2.8rem,5.5vw,5rem);line-height:0.92;letter-spacing:0.04em;color:var(--text);margin-bottom:1.2rem}
-.section-title em{color:var(--gold-light);font-style:normal}
+/* PORTFOLIO */
+.ps{background:var(--black)}
+.phdr{max-width:1280px;margin:0 auto 3.5rem;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem}
+.pnote{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--txt2);line-height:1.8;text-align:right}
+.pnote strong{color:var(--gold-light);display:block;margin-bottom:.3rem;font-size:13px}
+.vg{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.vc{position:relative;overflow:hidden;aspect-ratio:16/9;background:var(--surf2);border:1px solid var(--bdr);transition:all .35s;display:block}
+.vc:hover{border-color:var(--bdr3);transform:scale(1.013);z-index:2;box-shadow:0 0 35px rgba(212,168,71,.14)}
+.vc.s2{grid-column:span 2}.vc.s3{grid-column:span 3}
+.vt{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:linear-gradient(135deg,var(--surf2),var(--surf3))}
+.vgl{position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 50% 50%,rgba(212,168,71,.07) 0%,transparent 70%)}
+.vp{position:relative;z-index:1;width:64px;height:64px;border-radius:50%;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;transition:all .3s;background:rgba(212,168,71,.1)}
+.vc:hover .vp{background:var(--gold);border-color:var(--gold);box-shadow:0 0 28px rgba(212,168,71,.55)}
+.vp svg{width:20px;height:20px;fill:var(--gold-light);margin-left:4px;transition:fill .3s}
+.vc:hover .vp svg{fill:#07070F}
+.vw{position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--txt2)}
+.vn{position:absolute;top:1rem;left:1.2rem;z-index:3;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:var(--gold);opacity:.6;transition:opacity .3s}
+.vc:hover .vn{opacity:1}
+.vo{position:absolute;inset:0;background:linear-gradient(to top,rgba(7,7,15,.97) 0%,rgba(7,7,15,.15) 55%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem 1.6rem;opacity:0;transition:opacity .3s;pointer-events:none}
+.vc:hover .vo{opacity:1}
+.vcat{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+.vtit{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:#fff;letter-spacing:.04em;line-height:1.1}
+.vh{font-size:11px;color:var(--txt2);margin-top:.4rem}
+.vh::before{content:'↗ ';color:var(--gold)}
 
-/* ── PORTFOLIO ── */
-.portfolio-section{background:var(--black)}
-.portfolio-intro{max-width:1280px;margin:0 auto 4rem;display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap}
-.portfolio-note{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:0.08em;line-height:1.8;max-width:300px;text-align:right}
-.portfolio-note span{color:var(--gold);display:block;margin-bottom:0.3rem}
+/* TOOLS */
+.ts{background:var(--surf)}
+.ti{max-width:1280px;margin:0 auto}
+.pipeline{display:flex;flex-direction:column;gap:3px;margin-top:3rem}
+.stage{background:var(--surf2);border:1px solid var(--bdr);overflow:hidden;transition:border-color .25s}
+.stage:hover{border-color:var(--bdr2)}
+.sh2{display:flex;align-items:center;gap:1.5rem;padding:1.4rem 2rem;cursor:pointer;user-select:none;transition:background .2s}
+.sh2:hover{background:rgba(212,168,71,.04)}
+.sn{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--gold);min-width:40px}
+.sname{font-size:1rem;font-weight:600;color:#fff;flex:1}
+.sct{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--txt3)}
+.sar{font-size:11px;color:var(--gold);transition:transform .3s}
+.sar.open{transform:rotate(90deg)}
+.sbody{display:none;padding:0 2rem 2rem;border-top:1px solid var(--bdr)}
+.sbody.open{display:block}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:3px;margin-top:1.5rem}
+.tool{background:var(--surf3);border:1px solid var(--bdr);padding:1.1rem 1.3rem;transition:all .2s}
+.tool:hover{border-color:var(--bdr2);transform:translateY(-2px)}
+.tn{font-weight:600;font-size:14px;color:#fff;margin-bottom:.25rem}
+.tt{font-size:12px;color:var(--txt2)}
+.tb{display:inline-block;margin-top:.5rem;padding:.15rem .6rem;font-size:9px;letter-spacing:.12em;text-transform:uppercase;background:rgba(212,168,71,.14);color:var(--gold-light)}
+.tb.sl{background:rgba(150,150,150,.12);color:var(--txt2)}
 
-/* VIDEO GRID */
-.video-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.video-card{position:relative;overflow:hidden;aspect-ratio:16/9;background:var(--surface2);border:1px solid var(--border);transition:all 0.4s;display:block;text-decoration:none;cursor:pointer}
-.video-card:hover{border-color:var(--border-strong);transform:scale(1.015);z-index:2;box-shadow:0 0 40px rgba(201,168,76,0.1)}
-.video-card.featured{grid-column:span 2}
-.video-card.wide{grid-column:span 3}
+/* ABOUT */
+.as{background:var(--black)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;max-width:1280px;margin:0 auto}
+.abody{font-size:1rem;color:var(--txt2);line-height:1.9;margin-top:2rem}
+.abody p+p{margin-top:1.2rem}
+.abody strong{color:#fff;font-weight:600}
+.abox{background:var(--surf2);border:1px solid var(--bdr2);padding:1.6rem 2rem;margin-top:2.5rem;border-left:3px solid var(--gold);position:relative}
+.abox::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.albl{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.aname{font-size:15px;color:#fff;line-height:1.65;font-weight:500}
+.scol{padding-top:2rem}
+.sg{margin-bottom:2.5rem}
+.sgt{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--txt2);margin-bottom:1rem;padding-bottom:.5rem;border-bottom:1px solid var(--bdr)}
+.stags{display:flex;flex-wrap:wrap;gap:.5rem}
+.stg{padding:.35rem .9rem;border:1px solid var(--bdr2);font-size:13px;color:var(--txt2);transition:all .2s;cursor:default;border-radius:2px}
+.stg:hover{border-color:var(--gold);color:var(--gold-light)}
+.stg.hi{border-color:rgba(212,168,71,.45);color:var(--gold-light);background:rgba(212,168,71,.08);font-weight:500}
 
-/* THUMBNAIL — dark gradient bg with play button */
-.video-thumb{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem;background:var(--surface3)}
-.video-thumb-bg{position:absolute;inset:0;background:radial-gradient(ellipse 80% 80% at 50% 50%,rgba(201,168,76,0.04) 0%,transparent 70%)}
-.play-btn{position:relative;z-index:1;width:60px;height:60px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;transition:all 0.3s;background:rgba(201,168,76,0.08)}
-.video-card:hover .play-btn{background:var(--gold);border-color:var(--gold);box-shadow:0 0 30px rgba(201,168,76,0.5)}
-.play-btn svg{width:18px;height:18px;fill:var(--gold-light);margin-left:3px;transition:fill 0.3s}
-.video-card:hover .play-btn svg{fill:#06060A}
-.video-thumb-label{position:relative;z-index:1;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-dim)}
+/* CERTS */
+.cs{background:var(--surf)}
+.ci{max-width:1280px;margin:0 auto}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:4px;margin-top:3rem}
+.cc{background:var(--surf2);padding:2rem;border:1px solid var(--bdr);transition:all .3s;position:relative}
+.cc:hover{border-color:var(--bdr2);background:var(--surf3)}
+.cc.new{border-color:rgba(212,168,71,.45);background:rgba(212,168,71,.05)}
+.cc.new::after{content:'NEW';position:absolute;top:.8rem;right:.8rem;font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.14em;color:var(--gold);background:rgba(212,168,71,.18);padding:.2rem .5rem}
+.cico{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:var(--gold-light);margin-bottom:1rem}
+.ciss{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt3);margin-bottom:.5rem}
+.cnm{font-size:15px;color:#fff;margin-bottom:.4rem;line-height:1.55;font-weight:500}
+.cdt{font-size:12px;color:var(--txt2);font-family:'JetBrains Mono',monospace}
+.cno{font-size:11px;color:var(--txt3);font-family:'JetBrains Mono',monospace;margin-top:.3rem}
 
-/* OVERLAY on hover */
-.video-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(6,6,10,0.97) 0%,rgba(6,6,10,0.3) 50%,transparent 100%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem 1.8rem;opacity:0;transition:opacity 0.35s;pointer-events:none}
-.video-card:hover .video-overlay{opacity:1}
-.video-cat{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);margin-bottom:0.4rem}
-.video-name{font-family:'Bebas Neue',sans-serif;font-size:1.5rem;color:var(--text);letter-spacing:0.05em;line-height:1.1}
-.video-open-hint{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.15em;color:var(--text-muted);margin-top:0.5rem;display:flex;align-items:center;gap:0.5rem}
-.video-open-hint::before{content:'↗';color:var(--gold);font-size:12px}
+/* EXPERIENCE */
+.es{background:var(--black)}
+.ei{max-width:1280px;margin:0 auto}
+.eg{margin-top:3rem}
+.eitem{display:grid;grid-template-columns:210px 1fr;gap:3rem;padding:2.5rem 0;border-bottom:1px solid var(--bdr)}
+.eitem:first-child{border-top:1px solid var(--bdr)}
+.edate{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--txt2);line-height:1.8;padding-top:.3rem}
+.erole{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#fff;letter-spacing:.04em;margin-bottom:.3rem}
+.eorg{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.edesc{font-size:14px;color:var(--txt2);line-height:1.9}
 
-/* NUMBER BADGE */
-.video-num{position:absolute;top:1rem;left:1rem;z-index:3;font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:var(--gold);letter-spacing:0.1em;opacity:0.5;transition:opacity 0.3s}
-.video-card:hover .video-num{opacity:1}
+/* CONTACT */
+.cns{background:var(--surf)}
+.cni{max-width:900px;margin:0 auto;text-align:center}
+.cnb{font-size:1.05rem;color:var(--txt2);margin:2rem auto;max-width:540px;line-height:1.9}
+.cnd{display:flex;justify-content:center;gap:3.5rem;margin-top:3rem;flex-wrap:wrap}
+.cntype{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--txt3);margin-bottom:.5rem}
+.cnval{font-size:15px;color:var(--gold-light);font-weight:500}
+.cnval a{color:inherit}
+.cnval a:hover{color:#fff}
 
-/* ── TOOLS ── */
-.tools-section{background:var(--surface)}
-.tools-inner{max-width:1280px;margin:0 auto}
-.pipeline{display:flex;flex-direction:column;gap:2px;margin-top:3.5rem}
-.stage{background:var(--surface2);border:1px solid var(--border);overflow:hidden;transition:border-color 0.3s}
-.stage:hover{border-color:var(--border-mid)}
-.stage-hdr{display:flex;align-items:center;gap:1.8rem;padding:1.5rem 2.2rem;cursor:pointer;user-select:none;transition:background 0.25s}
-.stage-hdr:hover{background:rgba(201,168,76,0.03)}
-.stage-num{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--gold);min-width:42px;letter-spacing:0.06em}
-.stage-name{font-size:0.95rem;font-weight:500;color:var(--text);flex:1}
-.stage-count{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:0.1em}
-.stage-arr{font-size:11px;color:var(--gold);transition:transform 0.3s}
-.stage-arr.open{transform:rotate(90deg)}
-.stage-body{display:none;padding:0 2.2rem 2.2rem;border-top:1px solid var(--border)}
-.stage-body.open{display:block}
-.tools-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:2px;margin-top:1.5rem}
-.tool{background:var(--surface3);border:1px solid var(--border);padding:1.1rem 1.4rem;transition:all 0.25s}
-.tool:hover{border-color:var(--border-mid);transform:translateY(-2px)}
-.tool-name{font-weight:500;font-size:13px;color:var(--text);margin-bottom:0.25rem}
-.tool-type{font-size:11px;color:var(--text-dim)}
-.tool-badge{display:inline-block;margin-top:0.5rem;padding:0.15rem 0.6rem;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;background:rgba(201,168,76,0.1);color:var(--gold)}
-.tool-badge.sl{background:rgba(100,100,100,0.12);color:var(--text-dim)}
-
-/* ── ABOUT ── */
-.about-section{background:var(--black)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:start;max-width:1280px;margin:0 auto}
-.about-body{font-size:1rem;color:var(--text-muted);line-height:1.95;margin-top:2rem}
-.about-body p+p{margin-top:1.2rem}
-.about-body strong{color:var(--text);font-weight:500}
-.award-card{background:var(--surface2);border:1px solid var(--border);padding:1.6rem 2rem;margin-top:2.5rem;border-left:2px solid var(--gold);position:relative;overflow:hidden}
-.award-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
-.award-lbl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.6rem}
-.award-name{font-size:14px;color:var(--text);line-height:1.65}
-.skills-col{padding-top:2rem}
-.skill-grp{margin-bottom:2.5rem}
-.skill-grp-title{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-dim);margin-bottom:1rem;padding-bottom:0.5rem;border-bottom:1px solid var(--border)}
-.skill-tags{display:flex;flex-wrap:wrap;gap:0.4rem}
-.skill-tag{padding:0.3rem 0.9rem;border:1px solid var(--border);font-size:11px;color:var(--text-muted);transition:all 0.25s;cursor:default}
-.skill-tag:hover{border-color:var(--gold);color:var(--gold-light)}
-.skill-tag.hi{border-color:rgba(201,168,76,0.35);color:var(--gold-light);background:rgba(201,168,76,0.06)}
-
-/* ── CERTS ── */
-.certs-section{background:var(--surface)}
-.certs-inner{max-width:1280px;margin:0 auto}
-.certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;margin-top:3.5rem}
-.cert-card{background:var(--surface2);padding:2rem;border:1px solid var(--border);transition:all 0.3s;position:relative;overflow:hidden}
-.cert-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(201,168,76,0.03) 0%,transparent 60%);opacity:0;transition:opacity 0.3s;pointer-events:none}
-.cert-card:hover{border-color:var(--border-mid)}
-.cert-card:hover::after{opacity:1}
-.cert-icon{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:var(--gold);letter-spacing:0.08em;margin-bottom:1rem}
-.cert-issuer{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.2em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.4rem}
-.cert-name{font-size:13px;color:var(--text);margin-bottom:0.3rem;line-height:1.55}
-.cert-date{font-size:11px;color:var(--text-dim);font-family:'JetBrains Mono',monospace}
-
-/* ── EXPERIENCE ── */
-.exp-section{background:var(--black)}
-.exp-inner{max-width:1280px;margin:0 auto}
-.exp-grid{margin-top:3.5rem}
-.exp-item{display:grid;grid-template-columns:200px 1fr;gap:3.5rem;padding:2.5rem 0;border-bottom:1px solid var(--border)}
-.exp-item:first-child{border-top:1px solid var(--border)}
-.exp-date{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--text-dim);line-height:1.8;padding-top:0.2rem}
-.exp-role{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:var(--text);letter-spacing:0.04em;margin-bottom:0.2rem}
-.exp-org{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:0.9rem}
-.exp-desc{font-size:13px;color:var(--text-muted);line-height:1.9}
-
-/* ── CONTACT ── */
-.contact-section{background:var(--surface)}
-.contact-inner{max-width:900px;margin:0 auto;text-align:center}
-.contact-body{font-size:1rem;color:var(--text-muted);margin:2rem auto;max-width:520px;line-height:1.95}
-.contact-details{display:flex;justify-content:center;gap:4rem;margin-top:3rem;flex-wrap:wrap}
-.contact-type{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.25em;text-transform:uppercase;color:var(--text-dim);margin-bottom:0.5rem}
-.contact-val{font-size:14px;color:var(--gold-light)}
-.contact-val a{color:inherit;text-decoration:none}
-.contact-val a:hover{color:var(--gold)}
-
-footer{background:var(--black);border-top:1px solid var(--border);padding:2.5rem 5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-copy{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-dim)}
-.footer-note{font-size:11px;color:var(--text-dim)}
+footer{background:var(--black);border-top:1px solid var(--bdr);padding:2.5rem 4rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.fc{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--txt2)}
+.fn{font-size:12px;color:var(--txt2)}
 
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--black)}
 ::-webkit-scrollbar-thumb{background:var(--gold-dim)}
 
 @media(max-width:960px){
-  nav{padding:1rem 1.5rem}.nav-links{display:none}
-  .hero{padding:0 1.5rem 3.5rem}section{padding:5rem 1.5rem}
-  .about-grid{grid-template-columns:1fr;gap:3rem}
-  .video-grid{grid-template-columns:1fr}.video-card.featured,.video-card.wide{grid-column:span 1}
-  .exp-item{grid-template-columns:1fr;gap:0.6rem}
-  .hero-stats .stat{padding-right:1.5rem;margin-right:1.5rem}
+  nav{padding:1rem 1.5rem}.nlinks{display:none}
+  .hero{padding:90px 1.5rem 3.5rem}section{padding:5rem 1.5rem}
+  .ag{grid-template-columns:1fr;gap:3rem}
+  .vg{grid-template-columns:1fr}.vc.s2,.vc.s3{grid-column:span 1}
+  .eitem{grid-template-columns:1fr;gap:.6rem}
+  .hstats{gap:0}.st{padding-right:1.5rem;margin-right:1.5rem}
   footer{padding:2rem 1.5rem;flex-direction:column;text-align:center}
 }
 </style>
 </head>
 <body>
 
-<div class="cursor" id="cur"></div>
-<div class="cursor-ring" id="curRing"></div>
-
 <nav>
-  <div class="nav-logo">KAMAL <span>V</span></div>
-  <ul class="nav-links">
+  <div class="nlogo">KAMAL <span>V</span></div>
+  <ul class="nlinks">
     <li><a href="#portfolio">Portfolio</a></li>
     <li><a href="#tools">Pipeline</a></li>
     <li><a href="#about">About</a></li>
-    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#certifications">Certifications</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="hero-noise"></div>
-  <div class="hero-line"></div>
-  <div class="hero-eyebrow">AI Filmmaker &amp; End-to-End Generative Creative Producer</div>
-  <h1 class="hero-title">KAMAL<span class="accent">VENKITACHALAM</span></h1>
-  <p class="hero-subtitle">From script to screen — full-pipeline AI video, advertisement &amp; brand production. Cinematic. Precise. Globally delivered.</p>
-  <div class="hero-ctas">
-    <a href="#portfolio" class="btn-gold">View Portfolio</a>
-    <a href="#contact" class="btn-outline">Hire Me</a>
-  </div>
-  <div class="hero-stats">
-    <div class="stat"><div class="stat-val">29+</div><div class="stat-label">Years Leadership</div></div>
-    <div class="stat"><div class="stat-val">7</div><div class="stat-label">Intl. Film Awards</div></div>
-    <div class="stat"><div class="stat-val">20+</div><div class="stat-label">AI Tools Mastered</div></div>
-    <div class="stat"><div class="stat-val">6</div><div class="stat-label">Countries Worked</div></div>
+  <div class="hbg"></div><div class="hgrid"></div>
+  <div class="hrow">
+    <div class="htag">AI Filmmaker &amp; End-to-End Generative Creative Producer</div>
+    <h1>KAMAL<span class="acc">VENKITACHALAM</span></h1>
+    <p class="hsub">From script to screen — full-pipeline AI video, advertisement &amp; brand production using the world's most advanced generative tools. Cinematic. Precise. Globally delivered.</p>
+    <div class="hbtns">
+      <a href="#portfolio" class="bg">View Portfolio</a>
+      <a href="#contact" class="bo">Hire Me</a>
+      <a href="https://www.linkedin.com/in/kamal-v-322572166/" target="_blank" class="bo">LinkedIn</a>
+    </div>
+    <div class="hstats">
+      <div class="st"><div class="sv">29+</div><div class="sl">Years Experience</div></div>
+      <div class="st"><div class="sv">7</div><div class="sl">Intl. Film Awards</div></div>
+      <div class="st"><div class="sv">20+</div><div class="sl">AI Tools Mastered</div></div>
+      <div class="st"><div class="sv">6</div><div class="sl">Countries Worked</div></div>
+    </div>
   </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="portfolio-section" id="portfolio">
-  <div class="portfolio-intro">
+<section class="ps" id="portfolio">
+  <div class="phdr">
     <div>
-      <div class="section-eyebrow">Work</div>
-      <h2 class="section-title">AI VIDEO<br><em>PORTFOLIO</em></h2>
+      <div class="stag">Work</div>
+      <h2 class="sh">AI VIDEO<br><em>PORTFOLIO</em></h2>
     </div>
-    <div class="portfolio-note">
-      <span>▶ Click any card to watch</span>
-      Opens in Google Drive player. All videos are live and accessible.
-    </div>
+    <div class="pnote"><strong>▶ Click any card to watch</strong>Opens instantly in Google Drive player.<br>All 10 videos live and accessible.</div>
   </div>
-
-  <div class="video-grid">
-
-    <!-- VIDEO 1 — FEATURED -->
-    <a class="video-card featured" href="https://drive.google.com/file/d/19wHGjBB9eH09kqLm_zznH4E6Z98cItrC/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">01</div>
-      <div class="video-overlay">
-        <div class="video-cat">Generative AI · Experimental</div>
-        <div class="video-name">Unconnected Creativity AI Clips</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+  <div class="vg">
+    <a class="vc s2" href="https://drive.google.com/file/d/19wHGjBB9eH09kqLm_zznH4E6Z98cItrC/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">01</div>
+      <div class="vo"><div class="vcat">Generative AI · Experimental</div><div class="vtit">Unconnected Creativity AI Clips</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 2 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1giRYHD9G--VtsTsIooRk1szqOC1qR1Uc/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">02</div>
-      <div class="video-overlay">
-        <div class="video-cat">AI Advertisement</div>
-        <div class="video-name">Trak24 Video Advertisement</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1giRYHD9G--VtsTsIooRk1szqOC1qR1Uc/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">02</div>
+      <div class="vo"><div class="vcat">AI Advertisement</div><div class="vtit">Trak24 Video Advertisement</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 3 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1T1A8qH9rwkFr3MrTgyQPYkEXu3OJu55Z/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">03</div>
-      <div class="video-overlay">
-        <div class="video-cat">Cinematic · Award Film</div>
-        <div class="video-name">Sizzle Reel — Beyond the Unknown</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1T1A8qH9rwkFr3MrTgyQPYkEXu3OJu55Z/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">03</div>
+      <div class="vo"><div class="vcat">Cinematic · Award Film</div><div class="vtit">Sizzle Reel — Beyond the Unknown</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 4 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1Xx2eq63_5D4q0Lkt24-c1tOAOebYKiCu/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">04</div>
-      <div class="video-overlay">
-        <div class="video-cat">Sci-Fi · Generative</div>
-        <div class="video-name">Futuristic Movie Scene Sample</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1Xx2eq63_5D4q0Lkt24-c1tOAOebYKiCu/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">04</div>
+      <div class="vo"><div class="vcat">Sci-Fi · Generative</div><div class="vtit">Futuristic Movie Scene Sample</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 5 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1WPTi_yJHoLLleKrUJbtrOdwoT7obhw6-/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">05</div>
-      <div class="video-overlay">
-        <div class="video-cat">Documentary · AI Nature</div>
-        <div class="video-name">Nature Documentary Movie Samples</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1WPTi_yJHoLLleKrUJbtrOdwoT7obhw6-/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">05</div>
+      <div class="vo"><div class="vcat">Documentary · AI Nature</div><div class="vtit">Nature Documentary Movie Samples</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 6 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1Ed7UusH-pZtGz3dPHTyE3sUqFsTkjXG0/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">06</div>
-      <div class="video-overlay">
-        <div class="video-cat">Avatar · AI Character</div>
-        <div class="video-name">Double Engine for Body</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1Ed7UusH-pZtGz3dPHTyE3sUqFsTkjXG0/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">06</div>
+      <div class="vo"><div class="vcat">Avatar · AI Character</div><div class="vtit">Double Engine for Body</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 7 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1VO8s2NI8GJmLbmDLxPKQp4QJECldWKSi/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">07</div>
-      <div class="video-overlay">
-        <div class="video-cat">Avatar · AI Project</div>
-        <div class="video-name">Dilemma &amp; Trilemma</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1VO8s2NI8GJmLbmDLxPKQp4QJECldWKSi/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">07</div>
+      <div class="vo"><div class="vcat">Avatar · AI Project</div><div class="vtit">Dilemma &amp; Trilemma</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 8 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1Wg3l47rzN4n47HvFr82UC9e0alB6Xrkc/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">08</div>
-      <div class="video-overlay">
-        <div class="video-cat">AI Cinema · Intro Scene</div>
-        <div class="video-name">AI Movie Intro — Courier</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1Wg3l47rzN4n47HvFr82UC9e0alB6Xrkc/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">08</div>
+      <div class="vo"><div class="vcat">AI Cinema · Intro Scene</div><div class="vtit">AI Movie Intro — Courier</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 9 -->
-    <a class="video-card" href="https://drive.google.com/file/d/1trT3GLmbn3zQ3Das1uA4-9aRLVpLJ8jW/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">09</div>
-      <div class="video-overlay">
-        <div class="video-cat">Avatar · Educational</div>
-        <div class="video-name">Basics of Project Management</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc" href="https://drive.google.com/file/d/1trT3GLmbn3zQ3Das1uA4-9aRLVpLJ8jW/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">09</div>
+      <div class="vo"><div class="vcat">Avatar · Educational</div><div class="vtit">Basics of Project Management</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
-    <!-- VIDEO 10 — WIDE -->
-    <a class="video-card wide" href="https://drive.google.com/file/d/1Y8IIkuMKeObz0x-YMa-dBU8M8IHQ0x7J/view" target="_blank" rel="noopener">
-      <div class="video-thumb">
-        <div class="video-thumb-bg"></div>
-        <div class="play-btn"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
-        <div class="video-thumb-label">Click to Watch</div>
-      </div>
-      <div class="video-num">10</div>
-      <div class="video-overlay">
-        <div class="video-cat">AI Trailer · Sci-Fi</div>
-        <div class="video-name">AI Trailer — Alien Invasion</div>
-        <div class="video-open-hint">Opens in Drive Player</div>
-      </div>
+    <a class="vc s3" href="https://drive.google.com/file/d/1Y8IIkuMKeObz0x-YMa-dBU8M8IHQ0x7J/view" target="_blank" rel="noopener">
+      <div class="vt"><div class="vgl"></div><div class="vp"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="vw">Click to Watch</div></div>
+      <div class="vn">10</div>
+      <div class="vo"><div class="vcat">AI Trailer · Sci-Fi Action</div><div class="vtit">AI Trailer — Alien Invasion</div><div class="vh">Opens in Drive Player</div></div>
     </a>
-
   </div>
 </section>
 
-<!-- TOOLS -->
-<section class="tools-section" id="tools">
-  <div class="tools-inner">
-    <div class="section-eyebrow">Production Pipeline</div>
-    <h2 class="section-title">FULL-STACK AI<br><em>PRODUCTION ARSENAL</em></h2>
-    <p style="color:var(--text-muted);max-width:580px;margin-top:1.2rem;line-height:1.9">Every project moves through a complete end-to-end pipeline — concept and scripting through video generation, audio synthesis, editing and final delivery.</p>
+<section class="ts" id="tools">
+  <div class="ti">
+    <div class="stag">Production Pipeline</div>
+    <h2 class="sh">FULL-STACK AI<br><em>PRODUCTION ARSENAL</em></h2>
+    <p class="sdesc">Every project moves through a complete end-to-end pipeline — concept and scripting through video generation, audio synthesis, editing and final delivery. Click each stage to explore.</p>
     <div class="pipeline">
-
       <div class="stage">
-        <div class="stage-hdr" onclick="tog(this)">
-          <div class="stage-num">01</div><div class="stage-name">Concept, Scripting &amp; Storyboarding</div>
-          <div class="stage-count">4 tools</div><div class="stage-arr">&#9654;</div>
-        </div>
-        <div class="stage-body">
-          <div class="tools-grid">
-            <div class="tool"><div class="tool-name">Claude / ChatGPT</div><div class="tool-type">Script &amp; narrative AI</div><div class="tool-badge">Writing</div></div>
-            <div class="tool"><div class="tool-name">Notion AI</div><div class="tool-type">Project &amp; script planning</div><div class="tool-badge sl">Planning</div></div>
-            <div class="tool"><div class="tool-name">Gamma</div><div class="tool-type">Visual storyboard decks</div><div class="tool-badge sl">Storyboard</div></div>
-            <div class="tool"><div class="tool-name">Udio / Suno</div><div class="tool-type">Musical concept generation</div><div class="tool-badge">Audio</div></div>
-          </div>
-        </div>
+        <div class="sh2" onclick="tog(this)"><div class="sn">01</div><div class="sname">Concept, Scripting &amp; Storyboarding</div><div class="sct">4 tools</div><div class="sar">&#9654;</div></div>
+        <div class="sbody"><div class="tg">
+          <div class="tool"><div class="tn">Claude / ChatGPT</div><div class="tt">Script &amp; narrative AI</div><div class="tb">Writing</div></div>
+          <div class="tool"><div class="tn">Notion AI</div><div class="tt">Project &amp; script planning</div><div class="tb sl">Planning</div></div>
+          <div class="tool"><div class="tn">Gamma</div><div class="tt">Visual storyboard decks</div><div class="tb sl">Storyboard</div></div>
+          <div class="tool"><div class="tn">Udio / Suno</div><div class="tt">Musical concept generation</div><div class="tb">Audio</div></div>
+        </div></div>
       </div>
-
       <div class="stage">
-        <div class="stage-hdr" onclick="tog(this)">
-          <div class="stage-num">02</div><div class="stage-name">AI Image Generation</div>
-          <div class="stage-count">7 tools</div><div class="stage-arr">&#9654;</div>
-        </div>
-        <div class="stage-body">
-          <div class="tools-grid">
-            <div class="tool"><div class="tool-name">Midjourney</div><div class="tool-type">Photorealistic &amp; artistic imagery</div><div class="tool-badge">Image</div></div>
-            <div class="tool"><div class="tool-name">DALL·E 3</div><div class="tool-type">Prompt-driven image synthesis</div><div class="tool-badge">Image</div></div>
-            <div class="tool"><div class="tool-name">Stable Diffusion</div><div class="tool-type">Open-source image generation</div><div class="tool-badge">Image</div></div>
-            <div class="tool"><div class="tool-name">Adobe Firefly</div><div class="tool-type">Commercial-safe AI imagery</div><div class="tool-badge sl">Image</div></div>
-            <div class="tool"><div class="tool-name">Ideogram</div><div class="tool-type">Typography &amp; graphic design AI</div><div class="tool-badge">Image</div></div>
-            <div class="tool"><div class="tool-name">Leonardo AI</div><div class="tool-type">Consistent character &amp; asset gen</div><div class="tool-badge">Image</div></div>
-            <div class="tool"><div class="tool-name">Canva AI</div><div class="tool-type">Brand graphics &amp; social assets</div><div class="tool-badge sl">Design</div></div>
-          </div>
-        </div>
+        <div class="sh2" onclick="tog(this)"><div class="sn">02</div><div class="sname">AI Image Generation</div><div class="sct">7 tools</div><div class="sar">&#9654;</div></div>
+        <div class="sbody"><div class="tg">
+          <div class="tool"><div class="tn">Midjourney</div><div class="tt">Photorealistic &amp; artistic imagery</div><div class="tb">Image</div></div>
+          <div class="tool"><div class="tn">DALL·E 3</div><div class="tt">Prompt-driven image synthesis</div><div class="tb">Image</div></div>
+          <div class="tool"><div class="tn">Stable Diffusion</div><div class="tt">Open-source image generation</div><div class="tb">Image</div></div>
+          <div class="tool"><div class="tn">Adobe Firefly</div><div class="tt">Commercial-safe AI imagery</div><div class="tb sl">Image</div></div>
+          <div class="tool"><div class="tn">Ideogram</div><div class="tt">Typography &amp; design AI</div><div class="tb">Image</div></div>
+          <div class="tool"><div class="tn">Leonardo AI</div><div class="tt">Consistent character &amp; asset gen</div><div class="tb">Image</div></div>
+          <div class="tool"><div class="tn">Canva AI</div><div class="tt">Brand graphics &amp; social assets</div><div class="tb sl">Design</div></div>
+        </div></div>
       </div>
-
       <div class="stage">
-        <div class="stage-hdr" onclick="tog(this)">
-          <div class="stage-num">03</div><div class="stage-name">AI Video Generation</div>
-          <div class="stage-count">9 tools</div><div class="stage-arr">&#9654;</div>
-        </div>
-        <div class="stage-body">
-          <div class="tools-grid">
-            <div class="tool"><div class="tool-name">Luma AI</div><div class="tool-type">Cinematic video generation</div><div class="tool-badge">Video</div></div>
-            <div class="tool"><div class="tool-name">Kling AI</div><div class="tool-type">High-fidelity motion synthesis</div><div class="tool-badge">Video</div></div>
-            <div class="tool"><div class="tool-name">Higgsfield AI</div><div class="tool-type">Emotional character video &amp; FX</div><div class="tool-badge">Video</div></div>
-            <div class="tool"><div class="tool-name">Google Veo 3</div><div class="tool-type">Cinematic AI video with audio</div><div class="tool-badge">Video</div></div>
-            <div class="tool"><div class="tool-name">Sora (OpenAI)</div><div class="tool-type">Long-form cinematic video</div><div class="tool-badge">Video</div></div>
-            <div class="tool"><div class="tool-name">Wan (Alibaba)</div><div class="tool-type">Open-source video generation</div><div class="tool-badge">Video</div></div>
-            <div class="tool"><div class="tool-name">Hailuo (MiniMax)</div><div class="tool-type">Realistic motion &amp; character</div><div class="tool-badge">Video</div></div>
-            <div class="tool"><div class="tool-name">Runway Gen-3</div><div class="tool-type">Creative video &amp; motion FX</div><div class="tool-badge sl">Video</div></div>
-            <div class="tool"><div class="tool-name">Pika Labs</div><div class="tool-type">Image-to-video animation</div><div class="tool-badge sl">Video</div></div>
-          </div>
-        </div>
+        <div class="sh2" onclick="tog(this)"><div class="sn">03</div><div class="sname">AI Video Generation</div><div class="sct">9 tools</div><div class="sar">&#9654;</div></div>
+        <div class="sbody"><div class="tg">
+          <div class="tool"><div class="tn">Luma AI</div><div class="tt">Cinematic video generation</div><div class="tb">Video</div></div>
+          <div class="tool"><div class="tn">Kling AI</div><div class="tt">High-fidelity motion synthesis</div><div class="tb">Video</div></div>
+          <div class="tool"><div class="tn">Higgsfield AI</div><div class="tt">Emotional character video &amp; FX</div><div class="tb">Video</div></div>
+          <div class="tool"><div class="tn">Google Veo 3</div><div class="tt">Cinematic AI video with audio</div><div class="tb">Video</div></div>
+          <div class="tool"><div class="tn">Sora (OpenAI)</div><div class="tt">Long-form cinematic video</div><div class="tb">Video</div></div>
+          <div class="tool"><div class="tn">Wan (Alibaba)</div><div class="tt">Open-source video generation</div><div class="tb">Video</div></div>
+          <div class="tool"><div class="tn">Hailuo (MiniMax)</div><div class="tt">Realistic motion &amp; character</div><div class="tb">Video</div></div>
+          <div class="tool"><div class="tn">Runway Gen-3</div><div class="tt">Creative video &amp; motion FX</div><div class="tb sl">Video</div></div>
+          <div class="tool"><div class="tn">Pika Labs</div><div class="tt">Image-to-video animation</div><div class="tb sl">Video</div></div>
+        </div></div>
       </div>
-
       <div class="stage">
-        <div class="stage-hdr" onclick="tog(this)">
-          <div class="stage-num">04</div><div class="stage-name">AI Dance &amp; Motion Synthesis</div>
-          <div class="stage-count">3 tools</div><div class="stage-arr">&#9654;</div>
-        </div>
-        <div class="stage-body">
-          <div class="tools-grid">
-            <div class="tool"><div class="tool-name">See Dance (Higgsfield)</div><div class="tool-type">AI-driven dance &amp; body motion</div><div class="tool-badge">Motion</div></div>
-            <div class="tool"><div class="tool-name">Kling Dance Mode</div><div class="tool-type">Choreography video generation</div><div class="tool-badge">Motion</div></div>
-            <div class="tool"><div class="tool-name">Move AI</div><div class="tool-type">Motion capture &amp; animation</div><div class="tool-badge sl">Motion</div></div>
-          </div>
-        </div>
+        <div class="sh2" onclick="tog(this)"><div class="sn">04</div><div class="sname">AI Dance &amp; Motion Synthesis</div><div class="sct">3 tools</div><div class="sar">&#9654;</div></div>
+        <div class="sbody"><div class="tg">
+          <div class="tool"><div class="tn">See Dance (Higgsfield)</div><div class="tt">AI-driven dance &amp; body motion</div><div class="tb">Motion</div></div>
+          <div class="tool"><div class="tn">Kling Dance Mode</div><div class="tt">Choreography video generation</div><div class="tb">Motion</div></div>
+          <div class="tool"><div class="tn">Move AI</div><div class="tt">Motion capture &amp; animation</div><div class="tb sl">Motion</div></div>
+        </div></div>
       </div>
-
       <div class="stage">
-        <div class="stage-hdr" onclick="tog(this)">
-          <div class="stage-num">05</div><div class="stage-name">Voice-Over &amp; Audio Synthesis</div>
-          <div class="stage-count">6 tools</div><div class="stage-arr">&#9654;</div>
-        </div>
-        <div class="stage-body">
-          <div class="tools-grid">
-            <div class="tool"><div class="tool-name">ElevenLabs</div><div class="tool-type">Multilingual voice cloning &amp; TTS</div><div class="tool-badge">Voice</div></div>
-            <div class="tool"><div class="tool-name">Azure AI Speech</div><div class="tool-type">Enterprise neural voice synthesis</div><div class="tool-badge sl">Voice</div></div>
-            <div class="tool"><div class="tool-name">Murf AI</div><div class="tool-type">Professional studio voice-over</div><div class="tool-badge">Voice</div></div>
-            <div class="tool"><div class="tool-name">Descript</div><div class="tool-type">Voice cloning &amp; audio editing</div><div class="tool-badge">Voice</div></div>
-            <div class="tool"><div class="tool-name">Suno AI</div><div class="tool-type">AI music &amp; soundtrack generation</div><div class="tool-badge">Music</div></div>
-            <div class="tool"><div class="tool-name">Udio</div><div class="tool-type">Full song &amp; score creation</div><div class="tool-badge">Music</div></div>
-          </div>
-        </div>
+        <div class="sh2" onclick="tog(this)"><div class="sn">05</div><div class="sname">Voice-Over &amp; Audio Synthesis</div><div class="sct">6 tools</div><div class="sar">&#9654;</div></div>
+        <div class="sbody"><div class="tg">
+          <div class="tool"><div class="tn">ElevenLabs</div><div class="tt">Multilingual voice cloning &amp; TTS</div><div class="tb">Voice</div></div>
+          <div class="tool"><div class="tn">Azure AI Speech</div><div class="tt">Enterprise neural voice synthesis</div><div class="tb sl">Voice</div></div>
+          <div class="tool"><div class="tn">Murf AI</div><div class="tt">Professional studio voice-over</div><div class="tb">Voice</div></div>
+          <div class="tool"><div class="tn">Descript</div><div class="tt">Voice cloning &amp; audio editing</div><div class="tb">Voice</div></div>
+          <div class="tool"><div class="tn">Suno AI</div><div class="tt">AI music &amp; soundtrack generation</div><div class="tb">Music</div></div>
+          <div class="tool"><div class="tn">Udio</div><div class="tt">Full song &amp; score creation</div><div class="tb">Music</div></div>
+        </div></div>
       </div>
-
       <div class="stage">
-        <div class="stage-hdr" onclick="tog(this)">
-          <div class="stage-num">06</div><div class="stage-name">Editing, Post-Production &amp; Delivery</div>
-          <div class="stage-count">7 tools</div><div class="stage-arr">&#9654;</div>
-        </div>
-        <div class="stage-body">
-          <div class="tools-grid">
-            <div class="tool"><div class="tool-name">CapCut AI</div><div class="tool-type">AI-assisted video editing</div><div class="tool-badge sl">Edit</div></div>
-            <div class="tool"><div class="tool-name">Adobe Premiere Pro</div><div class="tool-type">Professional NLE editing</div><div class="tool-badge sl">Edit</div></div>
-            <div class="tool"><div class="tool-name">Descript</div><div class="tool-type">Text-based video editing</div><div class="tool-badge sl">Edit</div></div>
-            <div class="tool"><div class="tool-name">Topaz Video AI</div><div class="tool-type">AI upscaling &amp; enhancement</div><div class="tool-badge">Enhance</div></div>
-            <div class="tool"><div class="tool-name">Opus Clip</div><div class="tool-type">AI short-form clip creation</div><div class="tool-badge">Repurpose</div></div>
-            <div class="tool"><div class="tool-name">Veed.io</div><div class="tool-type">Subtitles, captions &amp; export</div><div class="tool-badge sl">Finish</div></div>
-            <div class="tool"><div class="tool-name">Frame.io</div><div class="tool-type">Client review &amp; delivery</div><div class="tool-badge sl">Deliver</div></div>
-          </div>
-        </div>
+        <div class="sh2" onclick="tog(this)"><div class="sn">06</div><div class="sname">Editing, Post-Production &amp; Delivery</div><div class="sct">7 tools</div><div class="sar">&#9654;</div></div>
+        <div class="sbody"><div class="tg">
+          <div class="tool"><div class="tn">CapCut AI</div><div class="tt">AI-assisted video editing</div><div class="tb sl">Edit</div></div>
+          <div class="tool"><div class="tn">Adobe Premiere Pro</div><div class="tt">Professional NLE editing</div><div class="tb sl">Edit</div></div>
+          <div class="tool"><div class="tn">Descript</div><div class="tt">Text-based video editing</div><div class="tb sl">Edit</div></div>
+          <div class="tool"><div class="tn">Topaz Video AI</div><div class="tt">AI upscaling &amp; enhancement</div><div class="tb">Enhance</div></div>
+          <div class="tool"><div class="tn">Opus Clip</div><div class="tt">AI short-form clip creation</div><div class="tb">Repurpose</div></div>
+          <div class="tool"><div class="tn">Veed.io</div><div class="tt">Subtitles, captions &amp; export</div><div class="tb sl">Finish</div></div>
+          <div class="tool"><div class="tn">Frame.io</div><div class="tt">Client review &amp; delivery</div><div class="tb sl">Deliver</div></div>
+        </div></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-grid">
+<section class="as" id="about">
+  <div class="ag">
     <div>
-      <div class="section-eyebrow">About</div>
-      <h2 class="section-title">WHERE SCIENCE<br>MEETS <em>CINEMA</em></h2>
-      <div class="about-body">
-        <p>I am an <strong>AI Filmmaker and End-to-End Creative Producer</strong> combining 29 years of international leadership with deep mastery of every major generative AI tool — from first prompt to final frame.</p>
+      <div class="stag">About</div>
+      <h2 class="sh">WHERE SCIENCE<br>MEETS <em>CINEMA</em></h2>
+      <div class="abody">
+        <p>I am an <strong>AI Filmmaker and End-to-End Creative Producer</strong> combining 29+ years of international leadership with deep mastery of every major generative AI tool — from first prompt to final frame.</p>
         <p>My expertise spans cinematic video generation, AI advertisement production, multilingual voice synthesis, AI image creation, dance and motion synthesis, music scoring, and full post-production — orchestrated into coherent, emotionally resonant productions.</p>
-        <p>I have worked across 6 countries, led science departments in internationally recognised schools, and produced award-winning AI film — bringing both <strong>creative vision and technical precision</strong> to every project.</p>
+        <p>I have worked across <strong>6 countries</strong> — Canada, India, Qatar, Malaysia, Laos, and Montenegro — led science departments in internationally recognised schools, and produced award-winning AI film, bringing both creative vision and technical precision to every project.</p>
+        <p>Fluent in <strong>English, Malayalam, Tamil and Hindi</strong> — enabling multilingual content production for South Asian and global audiences.</p>
       </div>
-      <div class="award-card">
-        <div class="award-lbl">★ International Recognition</div>
-        <div class="award-name">"Beyond the Unknown — Mysteries of the Lost Land" — 7 International Awards including Best Story, IFFI Goa 2023</div>
+      <div class="abox">
+        <div class="albl">★ International Recognition</div>
+        <div class="aname">"Beyond the Unknown — Mysteries of the Lost Land" — Winner of 7 International Awards including Best Story, selected at IFFI (International Film Festival of India), Goa 2023</div>
       </div>
     </div>
-    <div class="skills-col">
-      <div class="skill-grp">
-        <div class="skill-grp-title">Core Production Skills</div>
-        <div class="skill-tags">
-          <span class="skill-tag hi">Prompt Engineering</span>
-          <span class="skill-tag hi">Cinematic Video Gen</span>
-          <span class="skill-tag hi">Motion Synthesis</span>
-          <span class="skill-tag hi">Multilingual Audio</span>
-          <span class="skill-tag hi">Voice-Over Synthesis</span>
-          <span class="skill-tag hi">AI Music Scoring</span>
-          <span class="skill-tag hi">Brand Identity</span>
-          <span class="skill-tag hi">AI Advertisement</span>
-          <span class="skill-tag hi">Digital Marketing</span>
-        </div>
+    <div class="scol">
+      <div class="sg"><div class="sgt">Core AI Production Skills</div><div class="stags">
+        <span class="stg hi">Prompt Engineering</span><span class="stg hi">Cinematic Video Generation</span><span class="stg hi">Motion Synthesis</span><span class="stg hi">Multilingual Audio</span><span class="stg hi">Voice-Over Synthesis</span><span class="stg hi">AI Music Scoring</span><span class="stg hi">Brand Identity</span><span class="stg hi">AI Advertisement</span><span class="stg hi">Digital Marketing</span><span class="stg hi">Script Development</span><span class="stg hi">AI Storyboarding</span>
+      </div></div>
+      <div class="sg"><div class="sgt">Strategic &amp; Leadership</div><div class="stags">
+        <span class="stg">Digital Marketing Analytics</span><span class="stg">E-Commerce Strategy</span><span class="stg">International Leadership</span><span class="stg">Cross-functional Teams</span><span class="stg">Curriculum Design</span><span class="stg">Instructional Technology</span>
+      </div></div>
+      <div class="sg"><div class="sgt">Education</div><div class="stags">
+        <span class="stg">Master of Biology — UQAM Canada</span><span class="stg">Master of Zoology — Annamalai University</span><span class="stg">B.Ed. Science/Biology</span><span class="stg">IGCSE &amp; IB Certified Educator</span>
+      </div></div>
+      <div class="sg"><div class="sgt">Languages</div><div class="stags">
+        <span class="stg hi">English</span><span class="stg hi">Malayalam</span><span class="stg hi">Tamil</span><span class="stg hi">Hindi</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cs" id="certifications">
+  <div class="ci">
+    <div class="stag">Credentials</div>
+    <h2 class="sh">CERTIFICATIONS &amp;<br><em>AI EXPERTISE</em></h2>
+    <p class="sdesc">Continuously upskilling across AI platforms, tools, and frameworks — from cloud AI to generative filmmaking and prompt engineering.</p>
+    <div class="cgrid">
+      <div class="cc new"><div class="cico">&#128187;</div><div class="ciss">Anthropic</div><div class="cnm">Claude Code 101</div><div class="cdt">May 9, 2026</div></div>
+      <div class="cc new"><div class="cico">&#129302;</div><div class="ciss">Anthropic</div><div class="cnm">Claude 101</div><div class="cdt">May 9, 2026</div><div class="cno">Cert No: 3bjfa3s3tnzn</div></div>
+      <div class="cc"><div class="cico">AWS</div><div class="ciss">Udacity / AWS</div><div class="cnm">AWS AI Practitioner Challenge</div><div class="cdt">April 2026</div></div>
+      <div class="cc"><div class="cico">AWS</div><div class="ciss">Udacity / AWS</div><div class="cnm">AWS AI &amp; ML Scholars — 2026 Challenge</div><div class="cdt">March 2026</div></div>
+      <div class="cc"><div class="cico">AWS</div><div class="ciss">Udacity / AWS</div><div class="cnm">Analyze Data using AI with PartyRock</div><div class="cdt">March 2026</div></div>
+      <div class="cc"><div class="cico">AI</div><div class="ciss">Be10x</div><div class="cnm">AI Tools Workshop — AI Filmmaking</div><div class="cdt">January 2026</div></div>
+      <div class="cc"><div class="cico">GGL</div><div class="ciss">Google / Coursera</div><div class="cnm">Google AI Essentials &amp; Prompting Essentials</div><div class="cdt">October 2025</div></div>
+      <div class="cc"><div class="cico">GGL</div><div class="ciss">Google / Coursera</div><div class="cnm">Digital Marketing &amp; E-Commerce Professional Certificate</div><div class="cdt">October 2025</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="es" id="experience">
+  <div class="ei">
+    <div class="stag">Career</div>
+    <h2 class="sh">PROFESSIONAL<br><em>JOURNEY</em></h2>
+    <div class="eg">
+      <div class="eitem">
+        <div class="edate">Feb 2026 — Apr 2026</div>
+        <div><div class="erole">Digital Creative Expert</div><div class="eorg">Turing</div><div class="edesc">Developed end-to-end generative AI creative workflows using Luma AI, Kling, Higgsfield, and ElevenLabs. Authored complex JSON configurations for cinematic AI video generation with precise control over lighting, motion, and character consistency. Led brand identity design and cross-functional digital content strategy for global scalability.</div></div>
       </div>
-      <div class="skill-grp">
-        <div class="skill-grp-title">Strategic &amp; Business</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Digital Marketing Analytics</span>
-          <span class="skill-tag">E-Commerce Strategy</span>
-          <span class="skill-tag">International Leadership</span>
-          <span class="skill-tag">Cross-functional Teams</span>
-        </div>
+      <div class="eitem">
+        <div class="edate">Sep 2024 — Jun 2025</div>
+        <div><div class="erole">Senior Educator &amp; Head of Department — Combined Science</div><div class="eorg">The British Academy, Podgorica, Montenegro</div><div class="edesc">Led IGCSE and Lower Secondary science curriculum development while integrating digital media, visual storytelling and AI-supported tools for learner engagement and presentation quality.</div></div>
       </div>
-      <div class="skill-grp">
-        <div class="skill-grp-title">Languages</div>
-        <div class="skill-tags">
-          <span class="skill-tag">English</span>
-          <span class="skill-tag">Malayalam</span>
-          <span class="skill-tag">Tamil</span>
-          <span class="skill-tag">Hindi</span>
-        </div>
+      <div class="eitem">
+        <div class="edate">Aug 2019 — Jun 2024</div>
+        <div><div class="erole">Teacher — Science / Biology / History (IGCSE)</div><div class="eorg">Vientiane Pattana International School, Laos</div><div class="edesc">Used technology-enabled teaching tools, video content and visual simulations to improve learner engagement. Developed structured, visually driven learning modules aligned with modern digital communication standards.</div></div>
+      </div>
+      <div class="eitem">
+        <div class="edate">Jan 2013 — Jun 2019</div>
+        <div><div class="erole">Head of Department — Science (IGCSE, O &amp; A Levels)</div><div class="eorg">UCSI International School, Malaysia</div><div class="edesc">Led the science department overseeing curriculum and instructional delivery for Biology, Physics, and Chemistry across an internationally recognised IGCSE school. Implemented tech-supported instructional strategies and strengthened communication through visual explanation and presentation design.</div></div>
+      </div>
+      <div class="eitem">
+        <div class="edate">Sep 2010 — Jun 2012</div>
+        <div><div class="erole">Teacher — Chemistry &amp; Biology (IGCSE)</div><div class="eorg">The English Modern School, Doha, Qatar</div><div class="edesc">Designed engaging science curricula and pioneered use of digital video content in classroom instruction for an international student body.</div></div>
+      </div>
+      <div class="eitem">
+        <div class="edate">Aug 2006 — Jun 2009</div>
+        <div><div class="erole">IB Diploma Programme — Biology &amp; Environmental Science | Asst. DP Coordinator</div><div class="eorg">Ecole Mondiale World School, Mumbai, India</div><div class="edesc">Coordinated the IB Diploma Programme and delivered Biology and Environmental Science to international students. Supported programme administration and curriculum alignment across departments.</div></div>
+      </div>
+      <div class="eitem">
+        <div class="edate">Jan 2002 — Feb 2005</div>
+        <div><div class="erole">Student Researcher &amp; Biology Lab Technician</div><div class="eorg">University of Quebec at Montreal (UQAM) / GEOTOP, Canada</div><div class="edesc">Conducted research in microbial ecology and molecular biology. Mentored postgraduate students in lab techniques. Awarded GEOTOP Scholarship/Bursary 2002–2004. Completed Masters of Biology at UQAM.</div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section class="certs-section" id="certifications">
-  <div class="certs-inner">
-    <div class="section-eyebrow">Credentials</div>
-    <h2 class="section-title">CERTIFICATIONS &amp;<br><em>AI EXPERTISE</em></h2>
-    <div class="certs-grid">
-      <div class="cert-card"><div class="cert-icon">AWS</div><div class="cert-issuer">Udacity / AWS</div><div class="cert-name">AWS AI Practitioner Challenge</div><div class="cert-date">April 2026</div></div>
-      <div class="cert-card"><div class="cert-icon">AWS</div><div class="cert-issuer">Udacity / AWS</div><div class="cert-name">AWS AI &amp; ML Scholars — 2026 Challenge</div><div class="cert-date">March 2026</div></div>
-      <div class="cert-card"><div class="cert-icon">AI</div><div class="cert-issuer">Be10x</div><div class="cert-name">AI Tools Workshop — AI Filmmaking</div><div class="cert-date">January 2026</div></div>
-      <div class="cert-card"><div class="cert-icon">GGL</div><div class="cert-issuer">Google / Coursera</div><div class="cert-name">Google AI Essentials &amp; Prompting Essentials</div><div class="cert-date">October 2025</div></div>
-      <div class="cert-card"><div class="cert-icon">AWS</div><div class="cert-issuer">Udacity / AWS</div><div class="cert-name">Analyze Data using AI with PartyRock</div><div class="cert-date">March 2026</div></div>
-      <div class="cert-card"><div class="cert-icon">GGL</div><div class="cert-issuer">Google / Coursera</div><div class="cert-name">Digital Marketing &amp; E-Commerce Professional Certificate</div><div class="cert-date">October 2025</div></div>
+<section class="cns" id="contact">
+  <div class="cni">
+    <div class="stag" style="justify-content:center">Get In Touch</div>
+    <h2 class="sh">LET'S CREATE<br><em>SOMETHING CINEMATIC</em></h2>
+    <p class="cnb">Available for freelance AI video production, AI advertisement creation, brand film, voice synthesis, motion projects, and full end-to-end generative AI consulting. Based in Kerala, India — working globally.</p>
+    <div style="margin-top:2.5rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="mailto:kvkamal120@gmail.com" class="bg">Email Me</a>
+      <a href="https://wa.me/916282636180" class="bo" target="_blank">WhatsApp</a>
+      <a href="https://www.linkedin.com/in/kamal-v-322572166/" class="bo" target="_blank">LinkedIn</a>
     </div>
-  </div>
-</section>
-
-<!-- EXPERIENCE -->
-<section class="exp-section" id="experience">
-  <div class="exp-inner">
-    <div class="section-eyebrow">Career</div>
-    <h2 class="section-title">PROFESSIONAL<br><em>JOURNEY</em></h2>
-    <div class="exp-grid">
-      <div class="exp-item">
-        <div class="exp-date">Feb 2026 — Apr 2026</div>
-        <div><div class="exp-role">Digital Creative Expert</div><div class="exp-org">Turing</div><div class="exp-desc">Developed end-to-end generative AI creative workflows using Luma AI, Kling, Higgsfield, and ElevenLabs. Authored complex JSON configurations for cinematic AI video generation with precise control over lighting, motion, and character consistency.</div></div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-date">Sep 2024 — Jun 2025</div>
-        <div><div class="exp-role">Senior Educator &amp; Head of Department</div><div class="exp-org">The British Academy, Montenegro</div><div class="exp-desc">Led IGCSE science curriculum development, incorporating digital media, visual storytelling and AI-supported tools for engagement and presentation.</div></div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-date">Aug 2019 — Jun 2024</div>
-        <div><div class="exp-role">Teacher — Science, Biology, History</div><div class="exp-org">Vientiane Pattana International School, Laos</div><div class="exp-desc">Used technology-enabled teaching tools, video content and visual simulations to improve learner engagement across international curricula.</div></div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-date">Jan 2013 — Jun 2019</div>
-        <div><div class="exp-role">Head of Department — Sciences</div><div class="exp-org">UCSI International School, Malaysia</div><div class="exp-desc">Led the science department overseeing curriculum and instructional delivery for Biology, Physics, and Chemistry across an internationally recognised IGCSE school.</div></div>
-      </div>
-      <div class="exp-item">
-        <div class="exp-date">Jan 2002 — Feb 2005</div>
-        <div><div class="exp-role">Student Researcher &amp; Biology Lab Technician</div><div class="exp-org">University of Quebec at Montreal / GEOTOP, Canada</div><div class="exp-desc">Conducted research in microbial ecology and molecular biology. Awarded GEOTOP Scholarship/Bursary 2002–2004.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-inner">
-    <div class="section-eyebrow" style="justify-content:center">Get In Touch</div>
-    <h2 class="section-title">LET'S CREATE<br><em>SOMETHING CINEMATIC</em></h2>
-    <p class="contact-body">Available for freelance AI video production, AI advertisement creation, brand film, voice synthesis, motion projects, and full end-to-end generative AI consulting. Based in Kerala, India — working globally.</p>
-    <div style="margin-top:2.5rem"><a href="mailto:kvkamal120@gmail.com" class="btn-gold">Email Me</a></div>
-    <div class="contact-details">
-      <div><div class="contact-type">Email</div><div class="contact-val"><a href="mailto:kvkamal120@gmail.com">kvkamal120@gmail.com</a></div></div>
-      <div><div class="contact-type">WhatsApp</div><div class="contact-val"><a href="https://wa.me/916282636180">+91 6282636180</a></div></div>
-      <div><div class="contact-type">LinkedIn</div><div class="contact-val"><a href="https://www.linkedin.com/in/kamal-v-322572166" target="_blank">kamal-v-322572166</a></div></div>
-      <div><div class="contact-type">Location</div><div class="contact-val">Palakkad, Kerala, India</div></div>
+    <div class="cnd">
+      <div><div class="cntype">Primary Email</div><div class="cnval"><a href="mailto:kvkamal120@gmail.com">kvkamal120@gmail.com</a></div></div>
+      <div><div class="cntype">Alt Email</div><div class="cnval"><a href="mailto:vps4kamal@gmail.com">vps4kamal@gmail.com</a></div></div>
+      <div><div class="cntype">WhatsApp</div><div class="cnval"><a href="https://wa.me/916282636180">+91 62826 36180</a></div></div>
+      <div><div class="cntype">Location</div><div class="cnval">Palakkad, Kerala, India</div></div>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="footer-copy">&copy; 2026 Kamal Venkitachalam — All rights reserved</div>
-  <div class="footer-note">AI Filmmaker · AI Advertisement Producer · Digital Marketing Expert · Generative AI Specialist</div>
+  <div class="fc">&copy; 2026 Kamal Venkitachalam — All rights reserved</div>
+  <div class="fn">AI Filmmaker · Generative Video Creator · Digital Marketing Expert · AI Creative Producer</div>
 </footer>
 
 <script>
-// Custom cursor
-var cur=document.getElementById('cur'),ring=document.getElementById('curRing');
-document.addEventListener('mousemove',function(e){
-  cur.style.left=e.clientX+'px';cur.style.top=e.clientY+'px';
-  ring.style.left=e.clientX+'px';ring.style.top=e.clientY+'px';
-});
-document.querySelectorAll('a,button').forEach(function(el){
-  el.addEventListener('mouseenter',function(){ring.style.transform='translate(-50%,-50%) scale(1.8)';ring.style.opacity='0.8'});
-  el.addEventListener('mouseleave',function(){ring.style.transform='translate(-50%,-50%) scale(1)';ring.style.opacity='0.5'});
-});
-
-// Pipeline accordion
-function tog(hdr){
-  var body=hdr.nextElementSibling,arr=hdr.querySelector('.stage-arr'),open=body.classList.contains('open');
-  document.querySelectorAll('.stage-body').forEach(function(b){b.classList.remove('open')});
-  document.querySelectorAll('.stage-arr').forEach(function(a){a.classList.remove('open')});
-  if(!open){body.classList.add('open');arr.classList.add('open')}
+function tog(h){
+  var b=h.nextElementSibling,a=h.querySelector('.sar'),o=b.classList.contains('open');
+  document.querySelectorAll('.sbody').forEach(function(x){x.classList.remove('open')});
+  document.querySelectorAll('.sar').forEach(function(x){x.classList.remove('open')});
+  if(!o){b.classList.add('open');a.classList.add('open')}
 }
-
-// Scroll reveal
-var obs=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}});
-},{threshold:0.1});
-document.querySelectorAll('.video-card,.cert-card,.exp-item,.tool').forEach(function(el){
-  el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity 0.5s ease,transform 0.5s ease';
-  obs.observe(el);
+var io=new IntersectionObserver(function(e){
+  e.forEach(function(x){if(x.isIntersecting){x.target.style.opacity='1';x.target.style.transform='translateY(0)'}});
+},{threshold:0.06});
+document.querySelectorAll('.vc,.cc,.eitem,.tool').forEach(function(el){
+  el.style.opacity='0';el.style.transform='translateY(16px)';
+  el.style.transition='opacity 0.5s ease,transform 0.5s ease';
+  io.observe(el);
 });
 </script>
 </body>
